@@ -1,78 +1,85 @@
-# 项目协作平台课设
-c#课程设计；C# Winforms task management system for university course design.
-## 项目概述
-项目协作平台是一个基于C# WinForms开发的桌面应用程序，专为小型团队设计。本系统通过数字化工具解决任务分配混乱、进度跟踪滞后、文档散落丢失等团队协作常见痛点，实现了任务全流程管控、文档集中管理、角色权限隔离和项目数据安全备份。
+# 项目协作平台（C# WinForms）
+![.NET Framework](https://img.shields.io/badge/.NET%20Framework-4.7.2+-blue.svg)
+![WinForms](https://img.shields.io/badge/UI-WinForms-brightgreen.svg)
+![SQL Server](https://img.shields.io/badge/Database-SQL%20Server%202016+-orange.svg)
+![iTextSharp](https://img.shields.io/badge/PDF-iTextSharp-purple.svg)
 
-## 系统架构
-###技术栈
-**开发平台**  .NET Framework 4.7.2+
-**前端框架**  Windows Forms (WinForms)
-**后端语言**  C#
-**数据库**    SQL Server 2016+
-**报表生成**  	iTextSharp
-**版本控制**  	Git
-###数据库
-用户(Users) ──┬── 创建 ──▶ 项目(Projects)
-              ├── 执行 ──▶ 任务(Tasks) ─── 属于 ──▶ 项目(Projects)
-              └── 分配 ──▶ 任务(Tasks)
-              
-## 核心功能详解
-###1. 用户角色与权限
-| 角色 | 核心权限 | 数据范围 |
-|** 成员 **| 查看个人任务、提交进度、上传文档/截图、导出个人报告|'ExecutorID'=自己的任务|
-|** 项目经理 **| 分配任务、审核进度、查看团队任务、查看附件 |'AllocatorID'=自己的任务|
-|** 管理员 **| 项目管理、用户管理、数据备份、系统维护 |全系统数据|
-###2. 任务状态流转
-###3. 文件关联管理
-支持格式：
-  - 截图：.jpg, .jpeg, .png, .bmp, .gif
-  - 文档：.doc, .docx, .xls, .xlsx, .ppt, .pptx, .pdf, .txt
-###4. PDF报告生成
-  - 个人任务报告
-  - 团队进度报告
+## 项目简介
+本项目是 **C# WinForms 课程设计** 实现的团队任务协作管理桌面应用，专为高校课程设计场景和小型团队协作打造。
+核心目标：解决小型团队任务分配混乱、进度跟踪滞后、文档散落丢失等问题，实现「任务全流程管控 + 文档集中管理 + 角色权限隔离 + 数据安全备份」的一体化协作方案。
+
+## 技术栈
+| 分类         | 技术/工具                          |
+|--------------|------------------------------------|
+| 开发框架     | .NET Framework 4.7.2+              |
+| 前端界面     | Windows Forms (WinForms)           |
+| 后端语言     | C#                                 |
+| 数据库       | SQL Server 2016+                   |
+| PDF 生成     | iTextSharp                         |
+| 版本控制     | Git                                |
+| 开发工具     | Visual Studio 2019/2022            |
+
+## 核心功能
+### 1. 角色权限管控（三级权限隔离）
+| 角色       | 核心权限                                  | 数据访问范围                     |
+|------------|-------------------------------------------|----------------------------------|
+| 普通成员   | 查看个人任务、提交进度、上传附件、导出个人报告 | 仅 `ExecutorID = 个人ID` 的任务  |
+| 项目经理   | 分配任务、审核进度、查看团队任务、管理附件    | 仅 `AllocatorID = 个人ID` 的项目/任务 |
+| 系统管理员 | 用户管理、项目管理、数据备份、系统维护       | 全系统数据                       |
+
+### 2. 任务全生命周期管理
+- 任务状态流转：创建 → 分配 → 进行中 → 提交审核 → 完成/驳回
+- 进度可视化：任务状态标签、进度条直观展示
+- 历史记录：任务修改/进度更新日志追溯
+
+### 3. 文档/附件管理
+- 支持格式：
+  - 图片：jpg/jpeg/png/bmp/gif
+  - 文档：doc/docx/xls/xlsx/ppt/pptx/pdf/txt
+- 附件关联：文件与任务/项目绑定，支持预览、下载、删除
+
+### 4. 报表导出
+- 个人任务完成情况 PDF 报告
+- 团队项目进度汇总 PDF 报告
 
 ## 项目结构
-csharp-Collaration-Projects/
-├── ProjectCollabPlatform.sln              # 解决方案文件
-├── ProjectCollabPlatform/                 # 主项目
-│   ├── Forms/                             # 窗体文件
-│   │   ├── LoginForm.cs                   # 登录窗体
-│   │   ├── MainForm.cs                    # 主窗体基类
-│   │   ├── AdminForm.cs                   # 管理员界面
-│   │   ├── ManagerForm.cs                 # 项目经理界面
-│   │   └── MemberForm.cs                  # 成员界面
-│   ├── Models/                            # 数据模型
-│   │   ├── User.cs
-│   │   ├── Project.cs
-│   │   └── Task.cs
-│   ├── Services/                          # 业务服务
-│   │   ├── TaskService.cs
-│   │   ├── ProjectService.cs
-│   │   └── AuthService.cs
-│   ├── Utilities/                         # 工具类
-│   │   ├── DBHelper.cs                    # 数据库助手
-│   │   ├── PdfExporter.cs                 # PDF导出工具
-│   │   └── FileValidator.cs               # 文件验证工具
-│   ├── Resources/                         # 资源文件
-│   │   ├── Images/                        # 图片资源
-│   │   └── Icons/                         # 图标资源
-│   └── App.config                         # 配置文件
-├── DatabaseScripts/                       # 数据库脚本
-│   ├── CreateTables.sql                   # 建表语句
-│   └── SampleData.sql                     # 示例数据
-└── README.md                              # 项目说明
+csharp-Collaration-Projects/├── ProjectCollabPlatform.sln # 解决方案文件├── ProjectCollabPlatform/ # 主项目（WinForms）│ ├── Forms/ # 窗体（按角色拆分）│ │ ├── LoginForm.cs # 登录窗体（权限校验入口）│ │ ├── MainForm.cs # 主窗体基类（通用布局）│ │ ├── AdminForm.cs # 管理员专属界面│ │ ├── ManagerForm.cs # 项目经理专属界面│ │ └── MemberForm.cs # 普通成员专属界面│ ├── Models/ # 实体模型（ORM 映射）│ │ ├── User.cs # 用户模型（角色 / 权限）│ │ ├── Project.cs # 项目模型│ │ └── Task.cs # 任务模型（状态 / 进度 / 附件）│ ├── Services/ # 业务逻辑层（解耦 UI 与数据）│ │ ├── TaskService.cs # 任务增删改查 / 进度更新│ │ ├── ProjectService.cs # 项目管理逻辑│ │ └── AuthService.cs # 登录 / 权限校验逻辑│ ├── Utilities/ # 通用工具类│ │ ├── DBHelper.cs # 数据库连接 / 增删改查封装│ │ ├── PdfExporter.cs # PDF 报告生成工具│ │ └── FileValidator.cs # 附件格式 / 大小校验│ ├── Resources/ # 静态资源│ │ ├── Images/ # 界面图片│ │ └── Icons/ # 功能图标│ └── App.config # 数据库连接配置├── DatabaseScripts/ # 数据库脚本（一键部署）│ ├── CreateTables.sql # 表结构创建语句│ └── SampleData.sql # 测试用示例数据└── README.md # 项目说明
+
+
+## 快速开始（课程设计部署）
+### 环境要求
+1. 安装 Visual Studio 2019/2022（需安装 .NET Framework 4.7.2 开发工具）
+2. 安装 SQL Server 2016+（或 SQL Server Express 免费版）
+
+### 部署步骤
+1. 克隆本仓库：`git clone https://github.com/Yuv-23/csharp-Collaration-Projects.git`
+2. 执行数据库脚本：
+   - 打开 SQL Server Management Studio (SSMS)
+   - 执行 `DatabaseScripts/CreateTables.sql` 创建表结构
+   - （可选）执行 `DatabaseScripts/SampleData.sql` 导入测试数据
+3. 配置数据库连接：
+   - 打开 `ProjectCollabPlatform/App.config`
+   - 修改 `<connectionStrings>` 中的 `server`/`user id`/`password` 为你的 SQL Server 信息
+4. 运行项目：
+   - 用 Visual Studio 打开 `ProjectCollabPlatform.sln`
+   - 右键解决方案 → 还原 NuGet 包（自动安装 iTextSharp 等依赖）
+   - 按 F5 启动调试
 
 ## 未来扩展方向
-###功能增强
-1. 即时通信模块
-2. 移动端适配
-3. 智能分析：任务进度评估、团队效率分析
-   
-###技术升级
-1. 架构升级
-2. 部署优化
+### 功能增强
+1. 即时通信模块：团队内消息推送/聊天
+2. 移动端适配：基于 MAUI 开发跨平台移动端
+3. 智能分析：任务进度预警、团队效率统计报表
 
-## ⭐ 如果这个项目对你有帮助，请点个Star支持一下！
- - **邮箱**：vickyyyxpan@outlook.com
- - **GitHub**：@Yuv-23
-   
+### 技术升级
+1. 架构重构：采用三层架构（UI → BLL → DAL）+ 依赖注入
+2. 数据库优化：引入 EF Core 替代原生 ADO.NET
+3. 部署优化：打包为 EXE 安装包，支持一键部署
+
+## 致谢
+如果本项目对你的 C# 课程设计有帮助，欢迎点亮 ⭐ Star 支持！
+
+### 联系方式
+- 邮箱：vickyyyxpan@outlook.com
+- GitHub：[@Yuv-23](https://github.com/Yuv-23)
+  
