@@ -43,8 +43,38 @@
 - 团队项目进度汇总 PDF 报告
 
 ## 项目结构
-csharp-Collaration-Projects/├── ProjectCollabPlatform.sln # 解决方案文件├── ProjectCollabPlatform/ # 主项目（WinForms）│ ├── Forms/ # 窗体（按角色拆分）│ │ ├── LoginForm.cs # 登录窗体（权限校验入口）│ │ ├── MainForm.cs # 主窗体基类（通用布局）│ │ ├── AdminForm.cs # 管理员专属界面│ │ ├── ManagerForm.cs # 项目经理专属界面│ │ └── MemberForm.cs # 普通成员专属界面│ ├── Models/ # 实体模型（ORM 映射）│ │ ├── User.cs # 用户模型（角色 / 权限）│ │ ├── Project.cs # 项目模型│ │ └── Task.cs # 任务模型（状态 / 进度 / 附件）│ ├── Services/ # 业务逻辑层（解耦 UI 与数据）│ │ ├── TaskService.cs # 任务增删改查 / 进度更新│ │ ├── ProjectService.cs # 项目管理逻辑│ │ └── AuthService.cs # 登录 / 权限校验逻辑│ ├── Utilities/ # 通用工具类│ │ ├── DBHelper.cs # 数据库连接 / 增删改查封装│ │ ├── PdfExporter.cs # PDF 报告生成工具│ │ └── FileValidator.cs # 附件格式 / 大小校验│ ├── Resources/ # 静态资源│ │ ├── Images/ # 界面图片│ │ └── Icons/ # 功能图标│ └── App.config # 数据库连接配置├── DatabaseScripts/ # 数据库脚本（一键部署）│ ├── CreateTables.sql # 表结构创建语句│ └── SampleData.sql # 测试用示例数据└── README.md # 项目说明
-
+<details>
+  <summary>📁 点击展开/收起完整项目结构</summary>
+csharp-Collaration-Projects/  # 项目根目录
+├── ProjectCollabPlatform.sln          # 解决方案文件（VS入口）
+├── ProjectCollabPlatform/             # 主WinForms项目目录
+│   ├── Forms/                         # 窗体层（按角色拆分UI）
+│   │   ├── LoginForm.cs               # 登录窗体（权限校验入口）
+│   │   ├── MainForm.cs                # 主窗体基类（通用布局/方法）
+│   │   ├── AdminForm.cs               # 管理员专属操作界面
+│   │   ├── ManagerForm.cs             # 项目经理功能界面
+│   │   └── MemberForm.cs              # 普通成员操作界面
+│   ├── Models/                        # 数据模型层（ORM映射）
+│   │   ├── User.cs                    # 用户实体（角色/账号信息）
+│   │   ├── Project.cs                 # 项目实体（名称/负责人/周期）
+│   │   └── Task.cs                    # 任务实体（状态/进度/附件关联）
+│   ├── Services/                      # 业务逻辑层（解耦UI与数据）
+│   │   ├── TaskService.cs             # 任务增删改查/进度更新逻辑
+│   │   ├── ProjectService.cs          # 项目创建/编辑/删除逻辑
+│   │   └── AuthService.cs             # 登录验证/权限判断逻辑
+│   ├── Utilities/                     # 通用工具类（复用功能）
+│   │   ├── DBHelper.cs                # 数据库连接/CRUD封装
+│   │   ├── PdfExporter.cs             # PDF报告生成工具（iTextSharp）
+│   │   └── FileValidator.cs           # 附件格式/大小校验工具
+│   ├── Resources/                     # 静态资源目录
+│   │   ├── Images/                    # 界面图片（背景/Logo）
+│   │   └── Icons/                     # 功能图标（按钮/状态标识）
+│   └── App.config                     # 配置文件（数据库连接串等）
+├── DatabaseScripts/                   # 数据库脚本目录（一键部署）
+│   ├── CreateTables.sql               # 表结构创建语句（Users/Projects/Tasks）
+│   └── SampleData.sql                 # 测试数据（课设演示用）
+└── README.md                          # 项目说明文档
+</details>
 
 ## 快速开始（课程设计部署）
 ### 环境要求
