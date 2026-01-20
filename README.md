@@ -43,8 +43,6 @@
 - 团队项目进度汇总 PDF 报告
 
 ## 项目结构
-<details>
-  <summary>📁 点击展开/收起完整项目结构</summary>
 csharp-Collaration-Projects/  # 项目根目录
 ├── ProjectCollabPlatform.sln          # 解决方案文件（VS入口）
 ├── ProjectCollabPlatform/             # 主WinForms项目目录
@@ -70,11 +68,8 @@ csharp-Collaration-Projects/  # 项目根目录
 │   │   ├── Images/                    # 界面图片（背景/Logo）
 │   │   └── Icons/                     # 功能图标（按钮/状态标识）
 │   └── App.config                     # 配置文件（数据库连接串等）
-├── DatabaseScripts/                   # 数据库脚本目录（一键部署）
-│   ├── CreateTables.sql               # 表结构创建语句（Users/Projects/Tasks）
-│   └── SampleData.sql                 # 测试数据（课设演示用）
 └── README.md                          # 项目说明文档
-</details>
+
 
 ## 快速开始（课程设计部署）
 ### 环境要求
