@@ -1,0 +1,111 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\VScode\\VS project\\Collaraton\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC26C80-3492-43C8-AE3C-78214E66234F}|Collaraton\\Collaraton.csproj|e:\\vscode\\vs project\\collaraton\\collaraton\\ui\\projectmanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC26C80-3492-43C8-AE3C-78214E66234F}|Collaraton\\Collaraton.csproj|solutionrelative:collaraton\\ui\\projectmanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC26C80-3492-43C8-AE3C-78214E66234F}|Collaraton\\Collaraton.csproj|E:\\VScode\\VS project\\Collaraton\\collaraton\\ui\\memberform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC26C80-3492-43C8-AE3C-78214E66234F}|Collaraton\\Collaraton.csproj|solutionrelative:collaraton\\ui\\memberform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC26C80-3492-43C8-AE3C-78214E66234F}|Collaraton\\Collaraton.csproj|E:\\VScode\\VS project\\Collaraton\\collaraton\\ui\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC26C80-3492-43C8-AE3C-78214E66234F}|Collaraton\\Collaraton.csproj|solutionrelative:collaraton\\ui\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC26C80-3492-43C8-AE3C-78214E66234F}|Collaraton\\Collaraton.csproj|E:\\VScode\\VS project\\Collaraton\\collaraton\\ui\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC26C80-3492-43C8-AE3C-78214E66234F}|Collaraton\\Collaraton.csproj|solutionrelative:collaraton\\ui\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 920,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProjectManagerForm.cs",
+              "DocumentMoniker": "E:\\VScode\\VS project\\Collaraton\\Collaraton\\UI\\ProjectManagerForm.cs",
+              "RelativeDocumentMoniker": "Collaraton\\UI\\ProjectManagerForm.cs",
+              "ToolTip": "E:\\VScode\\VS project\\Collaraton\\Collaraton\\UI\\ProjectManagerForm.cs",
+              "RelativeToolTip": "Collaraton\\UI\\ProjectManagerForm.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T01:07:56.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminForm.cs",
+              "DocumentMoniker": "E:\\VScode\\VS project\\Collaraton\\Collaraton\\UI\\AdminForm.cs",
+              "RelativeDocumentMoniker": "Collaraton\\UI\\AdminForm.cs",
+              "ToolTip": "E:\\VScode\\VS project\\Collaraton\\Collaraton\\UI\\AdminForm.cs",
+              "RelativeToolTip": "Collaraton\\UI\\AdminForm.cs",
+              "ViewState": "AgIAAO4AAAAAAAAAAAAkwOYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T01:00:08.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "E:\\VScode\\VS project\\Collaraton\\Collaraton\\UI\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Collaraton\\UI\\LoginForm.cs",
+              "ToolTip": "E:\\VScode\\VS project\\Collaraton\\Collaraton\\UI\\LoginForm.cs",
+              "RelativeToolTip": "Collaraton\\UI\\LoginForm.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAuwIIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T00:49:24.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MemberForm.cs",
+              "DocumentMoniker": "E:\\VScode\\VS project\\Collaraton\\Collaraton\\UI\\MemberForm.cs",
+              "RelativeDocumentMoniker": "Collaraton\\UI\\MemberForm.cs",
+              "ToolTip": "E:\\VScode\\VS project\\Collaraton\\Collaraton\\UI\\MemberForm.cs",
+              "RelativeToolTip": "Collaraton\\UI\\MemberForm.cs",
+              "ViewState": "AgIAAMUAAAAAAAAAAAAkwJ8BAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T19:45:32.48Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 151,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
